@@ -1,0 +1,21 @@
+#h1{
+    color: rgb(87, 28, 187);
+}
+#p1{
+    color: brown;
+    text-transform: capitalize;
+}
+.c1{
+    color: blue;
+    text-transform: capitalize;
+}
+.c2{
+    color: red;
+    text-transform: capitalize;
+    
+}
+p,h2{
+    border-color: rgb(225, 0, 255);
+    color: aqua;
+    /* background-image: url(https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=) ; */
+}
