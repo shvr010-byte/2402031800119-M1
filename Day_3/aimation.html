@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  @keyframes floatAndSpin {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+    100% { transform: translateY(0) rotate(360deg); }
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+    background: #e74c3c;
+    border-radius: 50%;
+    animation: floatAndSpin 2s infinite ease-in-out;
+  }
+
+</style>
+</head>
+<body>
+    <h1  class="circle">hello</h1>
+</body>
+</html>
