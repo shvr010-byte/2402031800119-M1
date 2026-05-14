@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="art()">Arithmetic operator</button><br><br>
+    <button onclick="post()">post/pre operator</button><br><br>
+
+    <label>Enter 1st number</label>
+    <input type="number" id="x"><br><br>
+    <label>Enter 2nd number</label>
+    <input type="number" id="y"><br><br>
+    
+    <button onclick="com()">Comparison operator</button><br><br>
+    <script>
+        function art(){
+            let x=5;
+            let y=10;
+            document.write("x="+x);
+            document.write("<br>y="+y);
+            document.write("x+y="+(x+y));
+            document.write("<br>x-y="+(x-y));
+            document.write("<br>x*y="+(x*y));
+            document.write("<br>y/x="+(y/x));
+
+        }
+        function post(){
+            let x=5;
+            document.write("x="+x);
+            document.write("<br>" + x++ + "<br>");
+            let y=5;
+            document.write("y="+y);
+            document.write("<br>" + ++y + "<br>")
+        }
+        function com(){
+            let x=document.getElementById("x").value;
+            let y=document.getElementById("y").value;
+            if(x>y){
+                document.write("x is greater than y");
+            }
+            else if(x<y){
+                document.write("x is less than y");
+            }
+            else{
+                document.write("x is equal to y");
+            }
+        }
+    </script>
+</body>
+</html>

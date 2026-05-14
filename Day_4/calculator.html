@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>calculator</h2>
+    
+    <input type="number" id="x"><br><br>
+    <input type="number" id="y"><br><br>
+    
+    
+    <button onclick="fun('+')">+</button><br><br>
+    <button onclick="fun('-')">-</button><br><br>
+    <button onclick="fun('*')">*</button><br><br>
+    <button onclick="fun('/')">/</button><br><br>
+    
+    <p id="demo"></p>
+
+    <script>
+        
+        function fun(operator){
+          
+            let x = Number(document.getElementById("x").value);
+            let y = Number(document.getElementById("y").value);
+            let z;
+
+            if (operator === "+") {
+                z = x + y;
+            } else if (operator === "-") {
+                z = x - y;
+            } else if (operator === "*") {
+                z = x * y;
+            } else if (operator === "/") {
+                z = y !== 0 ? x / y : "Cannot divide by zero";
+            }
+            
+            document.getElementById("demo").innerHTML = "Result is : " + z;
+        }
+    </script>
+</body>
+</html>
