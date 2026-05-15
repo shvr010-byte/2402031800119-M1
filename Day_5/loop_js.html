@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Print numbers from 1 to 10</h1>
+    <button onclick="prit()">Print</button><br><br>
+    
+    <h1>Calculate the Sum of First N Natural Numbers </h1>
+    <label>Enter a number</label>
+    <input type="number" id="n"><br><br>
+    <button onclick="sum(document.getElementById('n').value)">Calculate</button><br><br>
+
+    <h1>Print Even Numbers from 1 to N</h1>
+    <label>Enter a number</label>       
+    <input type="number" id="even"><br><br>
+    <button onclick="even(document.getElementById('even').value)">Print</button><br><br>    
+
+    <h1>Reverse an Array</h1>
+    <label>Enter array elements (comma separated)</label>
+    <input type="text" id="arrayInput"><br><br>
+    <button onclick="arr(document.getElementById('arrayInput').value)">Reverse</button><br><br>
+
+    <h1>Print a Pattern</h1>
+    <button onclick="pat()">Print</button><br><br>
+
+    <h1>Find the Maximum Number in an Array</h1>
+    <label>Enter array elements (comma separated)</label>   
+    <input type="text" id="maxArrayInput"><br><br>
+    <button onclick="max(document.getElementById('maxArrayInput').value)">Find Maximum</button><br><br>
+
+    <h1>Calculate Factorial</h1>
+    <label>Enter a number</label>
+    <input type="number" id="factorialInput"><br><br>
+    <button onclick="factorial(document.getElementById('factorialInput').value)">Calculate Factorial</button><br><br>
+
+    <h1>Print Fibonacci Series</h1>
+    <label>Enter the number of terms</label>
+    <input type="number" id="fibonacciInput"><br><br>
+    <button onclick="fibonacci(document.getElementById('fibonacciInput').value)">Print Fibonacci Series</button><br><br>
+
+    <h1>Check Even or Odd</h1>
+    <label>Enter a number</label>
+    <input type="number" id="evenOddInput"><br><br>
+    <button onclick="document.getElementById('evenOddResult').innerHTML=isEven  
+    (document.getElementById('evenOddInput').value)">Check</button><br><br>
+    <p id="evenOddResult"></p>  
+    <h1>Check Positive or Negative</h1>
+    <label>Enter a number</label>   
+    <input type="number" id="positiveNegativeInput"><br><br>
+    <button onclick="document.getElementById('positiveNegativeResult').innerHTML=isPositive(document.getElementById('positiveNegativeInput').value)">Check</button><br><br>
+    <p id="positiveNegativeResult"></p>
+    <h1>Check Palindrome</h1>
+    <label>Enter a string</label>   
+    <input type="text" id="palindromeInput"><br><br>
+    <button onclick="document.getElementById('palindromeResult').innerHTML=isPalindrome(document.getElementById('palindromeInput').value)">Check</button><br><br>
+    <p id="palindromeResult"></p>
+    <script>
+        function prit(){
+            for(let i=1; i<=10; i++){
+                document.write(i+"<br>");
+            }
+        }
+
+        function sum(n){
+            let sum=0;
+            for(let i=1; i<=n; i++){
+                sum+=i;
+            }
+            document.write("The sum of first "+n+" natural numbers is: "+sum);
+        }
+        function even(n){
+            document.write("Even numbers from 1 to "+n+" are: <br>");
+            for(let i=1; i<=n; i++){
+                if(i%2==0){
+                    document.write(i+"<br>");
+                }
+            }
+        }
+        function  arr(arr){
+            let reverse=[];
+            for(let i=arr.length-1; i>=0; i--){
+                reverse.push(arr[i]);
+            }
+            document.write("The reverse of the array is: "+reverse);
+        }
+        function pat(){
+            for(let i=1; i<=5; i++){
+                for(let j=1; j<=i; j++){
+                    document.write(" * ");
+                }
+                document.write("<br>");
+            }
+        }
+        function max(ar){
+            let max=ar[0];
+            for(let i=1; i<ar.length; i++){
+                if(ar[i]>max){
+                    max=ar[i];
+                }
+            }
+            document.write("The maximum number in the array is: "+max);
+
+        }
+
+        function factorial(n){
+            let fact=1;
+            for(let i=1; i<=n; i++){
+                fact*=i;
+            }
+            document.write("The factorial of "+n+" is: "+fact);
+        }
+
+        function fibonacci(n){
+            let a=0, b=1, c;
+            document.write("Fibonacci series up to "+n+" is: <br>");
+            for(let i=1; i<=n; i++){
+                document.write(a+"<br>");
+                c=a+b;
+                a=b;
+                b=c;
+            }
+        }
+        function isEven(num){
+            if(num % 2 === 0){
+                return num + " is an even number.";
+            }
+            else{
+                return num + " is an odd number.";
+            }
+        }
+
+        function isPositive(num){
+            if(num > 0){
+                return num + " is a positive number.";
+            }
+            else if(num < 0){
+                return num + " is a negative number.";
+            }
+            else{
+                return num + " is zero.";
+            }
+        }
+
+        function isPalindrome(str){
+            const cleanedStr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+            const reversedStr = cleanedStr.split('').reverse().join('');
+            if(cleanedStr === reversedStr){
+                return str + " is a palindrome.";
+            }
+            else{
+                return str + " is not a palindrome.";
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!-- // function fun(s){
+//     let x=s.toUpperCase()
+//     for(let i of x){
+//         if(i=='A'|| i=='E' || i=='I' || i=='u' || i=='O'){
+//             console.log(i);
+//         }
+//     }
+// }
+// r="heello";
+// fun(r)
+let arr=[1,5,8,6,8,8];
+arr.forEach((val)=>
+console.log(val*val))
+let x=arr.map((val)=>{
+    return val %2==0;
+});
+console.log(x)
+let y=arr.filter((val)=>{
+    return val %2==0;
+});
+console.log(y)i -->
