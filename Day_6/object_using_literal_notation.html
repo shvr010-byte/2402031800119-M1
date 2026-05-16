@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Example</title>
+</head>
+<body>
+    <script>
+        // Create object using literal syntax
+        var person = {
+            firstName: "Sandip",
+            lastName: "Patel",
+            sayM1: function() {
+                alert("Hello " + this.firstName + " " + this.lastName);
+            }
+        };
+
+        // Call the method
+        person.sayM1();
+    </script>
+</body>
+</html>

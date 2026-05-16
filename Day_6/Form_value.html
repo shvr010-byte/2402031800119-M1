@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myform">
+        <input type="text" name="mytext">
+        <input type ="password" name="mypassword">
+        <button type="button" onclick="myFunction()">Try it</button>
+        </form>
+    <script>
+        function myFunction() {
+            var x = document.myform.mytext.value;
+            var y = document.myform.mypassword.value;
+            alert("Text: " + x + "\nPassword: " + y);
+        }
+    </script>
+</body>
+</html>
